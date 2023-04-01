@@ -16,7 +16,7 @@ public class Task04 {
         }
     }
 
-    public static void main(String[] args) {
+    public static void calcPlanets() {
         ArrayList<String> planets = new ArrayList<>();
         planets.add("Earth");
         planets.add("Mars");
