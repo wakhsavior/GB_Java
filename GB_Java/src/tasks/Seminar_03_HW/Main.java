@@ -30,18 +30,26 @@ public class Main {
 //        System.out.printf("Average number in the List: %.2f",Task03.calcAveList(list_01));
 
         // TASK 04 Реализовать разность массивов и симметрическую разность.
-        int N1 = tasks.UseFullMethods.requestInt();
-        int N2 = tasks.UseFullMethods.requestInt();
-        ArrayList list_01 = tasks.UseFullMethods.createList(N1);
-        ArrayList list_02 = tasks.UseFullMethods.createList(N2);
+//        int N1 = tasks.UseFullMethods.requestInt();
+//        int N2 = tasks.UseFullMethods.requestInt();
+//        ArrayList list_01 = tasks.UseFullMethods.createList(N1);
+//        ArrayList list_02 = tasks.UseFullMethods.createList(N2);
+//
+//        System.out.println(list_01.toString());
+//        System.out.println(list_02.toString());
+//        System.out.println("Symmetric Difference Array is :");
+//        System.out.println(Task04.symmetricDiffArray(list_01,list_02).toString());
+//        System.out.println("Difference ArrayA and ArrayB is :");
+//        System.out.println(Task04.diffArray(list_01,list_02).toString());
+//        System.out.println("Difference ArrayB and ArrayA is :");
+//        System.out.println(Task04.diffArray(list_02,list_01).toString());
 
+        // TASK 05 Релизовать быструю сортировку с рандомным выбором Pivot
+        int N = tasks.UseFullMethods.requestInt();
+        ArrayList list_01 = tasks.UseFullMethods.createList(N);
         System.out.println(list_01.toString());
-        System.out.println(list_02.toString());
-        System.out.println("Symmetric Difference Array is :");
-        System.out.println(Task04.symmetricDiffArray(list_01,list_02).toString());
-        System.out.println("Difference ArrayA and ArrayB is :");
-        System.out.println(Task04.diffArray(list_01,list_02).toString());
-        System.out.println("Difference ArrayB and ArrayA is :");
-        System.out.println(Task04.diffArray(list_02,list_01).toString());
+        Task05.myQuickSort_v2(list_01, 0, N-1);
+        System.out.println(list_01.toString());
+
     }
 }

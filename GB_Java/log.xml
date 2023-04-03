@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-04-02T23:05:49.524170800Z</date>
+  <millis>1680476749524</millis>
+  <nanos>170800</nanos>
+  <sequence>2</sequence>
+  <logger>tasks.Seminar_02.Logs</logger>
+  <level>INFO</level>
+  <class>tasks.Seminar_02.Logs</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>TEST LOG INFO</message>
+</record>
+</log>
