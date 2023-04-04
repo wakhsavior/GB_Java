@@ -1,10 +1,7 @@
 package tasks;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
-import java.util.Arrays;
+import java.util.*;
 
 public class UseFullMethods {
     public static int[] createArray(int N) {
@@ -16,6 +13,14 @@ public class UseFullMethods {
         return array;
     }
 
+    public static LinkedList<Integer> createLinkList(int N){
+        LinkedList<Integer> linkList = new LinkedList<>();
+        Random rnd = new Random();
+        for (int i = 0; i < N; i++) {
+            linkList.add(rnd.nextInt(20));
+        }
+        return linkList;
+    }
     public static ArrayList<Integer> createList(int N) {
         ArrayList<Integer> array = new ArrayList<>();
         Random rnd = new Random();
