@@ -14,25 +14,27 @@ public class Main {
 
         // TASK 02
 
-        QueueLinkedList ourQueue = new QueueLinkedList();
-        for (int i = 0; i < 10; i++) {
-            ourQueue.enqueue(i + i * 2);
-        }
-        ourQueue.showQueue();
-        System.out.println("Queue Size - " + ourQueue.getSize());
+//        QueueLinkedList ourQueue = new QueueLinkedList();
+//        for (int i = 0; i < 10; i++) {
+//            ourQueue.enqueue(i + i * 2);
+//        }
+//        ourQueue.showQueue();
+//        System.out.println("Queue Size - " + ourQueue.getSize());
+//
+//        System.out.println(ourQueue.first());
+//
+//        ourQueue.showQueue();
+//        System.out.println("Queue Size - " + ourQueue.getSize());
+//
+//        for (int i = 0; i < 10; i++) {
+//            System.out.println(ourQueue.dequeue());
+//            ourQueue.showQueue();
+//            System.out.println("Queue Size - " + ourQueue.getSize());
+//        }
 
-        System.out.println(ourQueue.first());
+        // TASK 03 Calculator
 
-        ourQueue.showQueue();
-        System.out.println("Queue Size - " + ourQueue.getSize());
-
-        for (int i = 0; i < 10; i++) {
-            System.out.println(ourQueue.dequeue());
-            ourQueue.showQueue();
-            System.out.println("Queue Size - " + ourQueue.getSize());
-        }
-
-
+        Calculator.calculator();
 
 
 
