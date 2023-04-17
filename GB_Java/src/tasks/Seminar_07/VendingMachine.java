@@ -9,14 +9,22 @@ public class VendingMachine {
     public VendingMachine(List<Product> product) {
         this.products = product;
     }
-    public BottleOfWater getBottleOfWater(String name, int volume){
-        for (Product product : products){
-            if (product instanceof BottleOfWater){
-                BottleOfWater bottle = ((BottleOfWater)product);
-                if (bottle.name.equals(name) && bottle.getVolume() == volume)
-                    return bottle;
-            }
+
+    public static void buyProduct (Product product){
+        if (product != null){
+            System.out.println("Вы купили: ");
+            System.out.println(product.displayInfo());
         }
+        else{
+            System.out.println("Такого товара в автомате нет");
+        }
+    }
+    public Product getProduct(String brand, String name, double price) {
+        for (Product product : products) {
+            if (product.name.equals(name) && product.getBrand() == brand && product.getPrice() == price)
+                return product;
+        }
+
         return null;
     }
 

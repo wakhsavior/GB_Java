@@ -1,14 +1,15 @@
 package tasks.Seminar_07;
 
 public class BottleOfMilk extends Product{
-    private int volume;  //объем
-    private int fat; // жирность
+    private float volume;  //объем
+    private float fat; // жирность
 
-    public int getVolume() {
+    public float getVolume() {
         return volume;
     }
 
-    public BottleOfMilk(String name, double price, int volume, int fat) {
+
+    public BottleOfMilk(String name, double price, float volume, float fat) {
         super(name, price);
         this.volume = volume;
         this.fat = fat;
@@ -17,7 +18,7 @@ public class BottleOfMilk extends Product{
     @Override
     public String displayInfo() {
 //        return super.displayInfo();
-        return String.format("%s - %s - %f - объем %d, жирность - %d", brand, name, price, volume, fat);
+        return String.format("%s - %s - %f - объем %.2f, жирность - %.1f%%", brand, name, price, volume, fat);
     }
 
 }

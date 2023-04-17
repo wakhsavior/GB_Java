@@ -30,7 +30,7 @@ public class Product {
     /**
      * Инициализатор
      */ {
-        System.out.println("Initializer");
+//        System.out.println("Initializer");
         param1 = 100;
         param2 = "...";
         param3 = true;
@@ -59,7 +59,7 @@ public class Product {
 //
 //    }
     public Product(String brand, String name, double price) {
-        System.out.println("Constructor");
+//        System.out.println("Constructor");
         if (brand.length() < 3)
             this.brand = "Noname";
         else this.brand = brand;
@@ -70,6 +70,14 @@ public class Product {
         else this.price = price;
 
 
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        if (brand != null) this.brand = brand;
     }
 
     public Product(String name, double price) {
