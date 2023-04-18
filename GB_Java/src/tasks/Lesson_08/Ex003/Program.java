@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import Lesson_08.Ex003.alliance.*;
-import Lesson_08.Ex003.*;
+import tasks.Lesson_08.Ex003.alliance.*;
+import tasks.Lesson_08.Ex003.*;
 
 public class Program {
     public static void main(String[] args) {
