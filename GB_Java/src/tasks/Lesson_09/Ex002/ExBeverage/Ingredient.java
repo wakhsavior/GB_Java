@@ -1,4 +1,4 @@
-package Lesson_09.Ex002.ExBeverage;
+package tasks.Lesson_09.Ex002.ExBeverage;
 
 public abstract class Ingredient {
     public String brand;

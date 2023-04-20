@@ -10,9 +10,9 @@ public class Main {
         albatros1.fly();
         albatros1.run();
         albatros2.fly();
-        albatros2.run();
+//        albatros2.run();
         albatros3.run();
-        albatros3.fly();
+//        albatros3.fly();
     }
 }
 

@@ -1,6 +1,6 @@
-package Lesson_09.Ex004;
+package tasks.Lesson_09.Ex004;
 
-import Lesson_09.Ex004.ExBeverage.*;
+import tasks.Lesson_09.Ex004.ExBeverage.*;
 
 // три вода
 public class Program {
@@ -10,7 +10,7 @@ public class Program {
         latte.addComponent(new Water("вода"));
         latte.addComponent(new Water("вода"));
         for (var ingredient : latte) {
-            System.err.println(ingredient);
+            System.out.println(ingredient);
         }
     }
 }
