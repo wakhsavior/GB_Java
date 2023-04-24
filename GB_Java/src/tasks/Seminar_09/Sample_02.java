@@ -9,12 +9,6 @@ public class Sample_02 {
     private static Random rnd = new Random();
     private static final int workerNumber = 10;
 
-    /**
-     * TODO 2. Переработать метод generateEmployee(). Метод должен возвращать любого
-     * случайного сотрудника разного типа (Worker, Freelancer)
-     *
-     * @return
-     */
     public static Employee generateEmployee() {
         String[] names = new String[]{"Анатолий", "Глеб", "Клим", "Мартин", "Лазарь", "Владлен", "Клим", "Панкратий", "Рубен", "Герман", "Денис", "Артем", "Роман", "Андрей", "Михаил"};
         String[] surnames = new String[]{"Григорьев", "Фокин", "Шестаков", "Хохлов", "Шубин", "Бирюков", "Копылов", "Горбунов", "Лыткин", "Соколов", "Холдов", "Павлюшин", "Самойлов", "Пинаев"};
@@ -83,11 +77,6 @@ public class Sample_02 {
         for (Employee employee : employees) {
             System.out.println(employee);
         }
-
-        /**
-         * TODO 3. Создать новый компаратор добавив дополнительные поля в класс и отсортировать с использованием
-         * созданного компаратора
-         */
     }
 }
 
@@ -119,8 +108,6 @@ class SurNameComparator implements Comparator<Employee> {
 }
 
 abstract class Employee implements Comparable<Employee> {
-
-
     protected String firstName;
     protected String surName;
     protected int age;
@@ -165,9 +152,6 @@ class Worker extends Employee {
     }
 }
 
-/**
- * TODO 1. Разработать самостоятельно в рамках ДЗ
- */
 class Freelancer extends Employee {
     protected ArrayList<Integer> workedDaysPerMonth;
 
