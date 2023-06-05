@@ -8,10 +8,14 @@ import java.util.List;
  */
 public class JobAgency implements Publisher{
     private List<Observer> observers = new ArrayList<>();
+    private List<Vacancy> vacancies = new ArrayList<>();
 
     @Override
     public void registerObserver(Observer observer) {
         observers.add(observer);
+        for (Vacancy vacancy: vacancies){
+            observer.receiveOffer(vacancy);
+        }
     }
 
     @Override
@@ -25,9 +29,26 @@ public class JobAgency implements Publisher{
      * @param salary
      */
     @Override
-    public void sendOffer(String nameCompany, double salary) {
-        for (Observer observer: observers){
-            observer.receiveOffer(nameCompany,salary);
+    public void sendOffer(String nameCompany, Vacancy vacancy) {
+        for (Vacancy curVacancy: vacancies) {
+            for (Observer observer: observers){
+                observer.receiveOffer(vacancy);
+            }
         }
+
+    }
+
+    @Override
+    public void registerVacancy(Vacancy vacancy) {
+        vacancies.add(vacancy);
+        for (Observer observer: observers){
+            observer.receiveOffer(vacancy);
+        }
+
+    }
+
+    @Override
+    public void removeVacancy(Vacancy vacancy) {
+        vacancies.remove(vacancy);
     }
 }

@@ -6,7 +6,7 @@ public class Program {
         MS200 ms200_1 = new MS200(11553);
         MeteoStore meteoStore = new MeteoStore();
         meteoStore.save(ms200_1);
-//        meteoStore.save(new AdapterST00Info(st500Info_1));
+        meteoStore.save(new AdapterST00Info(st500Info_1));
 
     }
 }

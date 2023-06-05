@@ -5,7 +5,7 @@ import java.util.Random;
 /*
  * Компания
  */
-public class Company {
+public class Company implements Requester{
     private Random random;
     private String nameCompany;
     private double maxSalary;
@@ -15,9 +15,20 @@ public class Company {
         this.nameCompany = nameCompany;
         this.maxSalary = maxSalary;
         this.jobAgency = jobAgency;
+        random = new Random();
     }
-    public void needEmployee(){
+
+    @Override
+    public void createVacancy(String vacancyName, VacancyType vacancyType) {
         double salary = random.nextDouble(3000,maxSalary);
-        jobAgency.sendOffer(nameCompany,salary);
+        Vacancy vacancy = new Vacancy(this,vacancyType,vacancyName,salary);
+        System.out.println(vacancy);
+        jobAgency.registerVacancy(vacancy);
+
+    }
+
+    @Override
+    public String toString() {
+        return String.format(nameCompany);
     }
 }

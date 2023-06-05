@@ -1,25 +1,13 @@
 package tasks.Seminar_13.observer;
 
-public class Master implements Observer{
-    private String name;
-    private double salary;
+public class Master extends Employee {
 
-    public Master(String name) {
-        this.name = name;
-        salary = 80000;
+    public Master(String name, VacancyType vacancyType,double salary) {
+        super.name = name;
+        super.salary = salary;
+        super.personType = "Специалист";
+        super.vacancyType = vacancyType;
     }
 
-    @Override
-    public void receiveOffer(String nameCompany, double salary) {
-        if (this.salary < salary){
-            System.out.printf("Специалист %d >>> Мне нужна эта работа! [%s - %f]\n",
-                    name,nameCompany,salary);
-            this.salary = salary;
-        }
-        else {
-            System.out.printf("Специалист %d >>> Я найду работу получше! [%s - %f]\n",
-                    name,nameCompany,salary);
 
-        }
-    }
 }

@@ -11,7 +11,7 @@ public class Program {
                 .setBody("body")
                 .setFrom("from")
                 .setSubject("subject")
-//                .setTo("To")
+                .setTo("To")
                 .build();
     }
 }

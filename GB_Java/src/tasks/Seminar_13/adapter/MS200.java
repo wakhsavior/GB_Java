@@ -8,21 +8,21 @@ public class MS200 implements MeteoSensor{
 
     @Override
     public int getId() {
-        return 0;
+        return id;
     }
 
     @Override
     public double getTemperature() {
-        return 0;
+        return 20;
     }
 
     @Override
     public double getHumidity() {
-        return 0;
+        return 11;
     }
 
     @Override
     public double getPressure() {
-        return 0;
+        return 1;
     }
 }
